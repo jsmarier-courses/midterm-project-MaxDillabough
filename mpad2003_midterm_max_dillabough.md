@@ -1,12 +1,10 @@
-**November 4th**<br>
-**MPAD2003 Introductory Data Storytelling**<br>
-**Max Dillabough**<br>
-**Presented to Jean-Sébastien Marier**<br>
+**November 4th**
+**MPAD2003 Introductory Data Storytelling**
+**Max Dillabough**
+**Presented to Jean-Sébastien Marier**
 
 # Midterm Project: Exploratory Data Analysis (EDA)
-
-Use one hashtag symbol (`#`) to create a level 1 heading like this one.
-
+---
 ## Foreword
 
 For this assignment, you must extract data from a dataset provided by the instructor. You must then clean and analyze the data, create exploratory charts/visualizations, and find a potential story idea. Your assignment must clearly detail your process. You are expected to write about 1500-2000 words, and to include several screen captures showing the different steps you went through. Your assignment must be written with the Markdown format and submitted on GitHub Classroom.
@@ -20,17 +18,26 @@ I have been assigning different versions of this project to my digital journalis
 
 Did you notice how to create a hyperlink? In Markdown, we put the clickable text between square brackets and the actual URL between parentheses.
 
-And to create an unordered list, we simply put a star (`*`) before each item.
+And to create an unordered list, we simply put a star (`Unordered List`) before each item.
 
 ## 1. Introduction
 
-Insert text here.
+In this assignment I will be analysing a city of Ottawa data set [*2024 Service Requests*](https://open.ottawa.ca/documents/65fe42e2502d442b8a774fd3d954cac5/about). This large set of data is a document that has, in detail, every service request made in the city of Ottawa throughout the year 2024. The document’s spreadsheet highlighted the following information about the service request: Service Request ID, Status, Type, Description, Opened Date, Closed Date, Address, Latitude, Longitude, Ward, and Channel. The channel section alludes to how the data was collected, the options are as follows: 311 Contact Centre, Client Service Centre, 311 Email, Web-based Self- Service portal. 
+
+For the purpose of this assignment the data has been restricted to only include the incident reports made in August 2024. Within this dataset I will be writing about and studying the relation between each report’s type and status. 
+
+*There are six sections to this document:*
+1.  *Introduction*
+1.  Getting Data*
+1. *Understanding Data* 
+3.1 *VIMO Analysis*
+3.2 *Cleaning Data*
+3.3 *Explantory Data Analysis*
+1. *Potential Story*
+1. *Conclusion*
+1. *References*
 
 ## 2. Getting Data
-
-Use two hashtag symbols (`##`) to create a level 2 heading like this one.
-
-To include a screen capture, use the sample code below. Your images should be saved in the same folder as your `.md` file.
 
 ![](partly-cleaned-chart.png)<br>
 *Figure 1: The "Import file" prompt on Google Sheets.*
