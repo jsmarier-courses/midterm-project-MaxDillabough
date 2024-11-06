@@ -6,17 +6,7 @@
 # Midterm Project: Exploratory Data Analysis (EDA)
 ---
 ## Foreword
-
-For this assignment, you must extract data from a dataset provided by the instructor. You must then clean and analyze the data, create exploratory charts/visualizations, and find a potential story idea. Your assignment must clearly detail your process. You are expected to write about 1500-2000 words, and to include several screen captures showing the different steps you went through. Your assignment must be written with the Markdown format and submitted on GitHub Classroom.
-
-I have been assigning different versions of this project to my digital journalism and data storytelling students for a few years now. Its structure was inspired by the main sections/chapters of [*The Data Journalism Handbook*](https://datajournalism.com/read/handbook/one/). This version was further inspired by the [Key Capabilities in Data Science](https://extendedlearning.ubc.ca/programs/key-capabilities-data-science) program offered by the University of British Columbia (UBC).
-
-**Here are some useful resources for this assignment:**
-
-* [GitHub's *Basic writing and formatting syntax* page](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-* [The template repository for this assignment in case you delete something by mistake](https://github.com/jsmarier/jou4100_jou4500_mpad2003_project2_template)
-
-Did you notice how to create a hyperlink? In Markdown, we put the clickable text between square brackets and the actual URL between parentheses.
+Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
 
 And to create an unordered list, we simply put a star (`Unordered List`) before each item.
 
@@ -28,7 +18,7 @@ For the purpose of this assignment the data has been restricted to only include 
 
 *There are six sections to this document:*
 1.  *Introduction*
-1.  Getting Data*
+1.  *Getting Data*
 1. *Understanding Data* 
 3.1 *VIMO Analysis*
 3.2 *Cleaning Data*
@@ -39,9 +29,20 @@ For the purpose of this assignment the data has been restricted to only include 
 
 ## 2. Getting Data
 
-![](partly-cleaned-chart.png)<br>
-*Figure 1: The "Import file" prompt on Google Sheets.*
+Sadly I had no part in the collection of the raw data presented by the city of Ottawa data set [*2024 Service Requests*](https://open.ottawa.ca/documents/65fe42e2502d442b8a774fd3d954cac5/about). After the data was collected it was posted online for the public to download and view. I downloaded the data through the link provided on Brightspace (LINK). After downloading the CSV file I imported it into google sheets. The un-edited, raw data that was given, looked like so: 
 
+
+![](partly-cleaned-chart.png)
+*The Raw Data*
+
+There are eleven columns and twenty eight thousand, five hundred thirty nine rows. This massive data set is a collection of all service requests made to the city of Ottawa during the month of August. On my first look I concluded that the chart was very messy. I immediately began to think of how I could start to crop the unwanted and unneeded data. Each column had a French and an English translation. Column 1 labels every service request with an ID number, for example the first column is labelled with the ID number 202457114702, this is an example of a categorical variable. The column labelled Type contains nominal variables because of the lack of natural order, no type is better than another. There was an issue in the Longitude and Latitude columns; there are three rows that had both Longitude and Latitude set to zero, this is impossible as that would mean the requests were made off the coast of Africa even though they’re supposed to be made within Ottawa. These outliers are not alone in being inaccurate coordinates as there is one latitude that is labelled as 0.000408032393, this is an incorrect piece of data as it would place the call to dispatch outside of Canada and within South America. I knew that the editing and understanding data phase of this project would be a long strenuous task. 
+	[Here is the link to my finished spreadsheet.](https://docs.google.com/spreadsheets/d/1nOKh_At9gIBojggtEPteNsc95fXGy0FLIGR02cvd0Wo/edit?usp=sharing)
+
+
+
+
+
+## 3. Understanding Data
 **Here are examples of functions and lines of code put in grey boxes:**
 
 1. If you name a function, put it between "angled" quotation marks like this: `IMPORTHTML`.
@@ -52,24 +53,31 @@ For the purpose of this assignment the data has been restricted to only include 
 =IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
 ```
 This also shows how to create an ordered list. Simply put `1.` before each item.
-
-## 3. Understanding Data
-
 ### 3.1. VIMO Analysis
 
-Use three hashtag symbols (`###`) to create a level 3 heading like this one. Please follow this template when it comes to level 1 and level 2 headings. However, you can use level 3 headings as you see fit.
+*Valid and Invalid Data:* For the most part all data is valid and usable. There are, at times, data that becomes near useless to my cause as it does not validate my analysis or what I am trying to prove. Columns like Longitude, Latitude, Address, Ward, and Closed Date are not helpful and therefore I have removed them from the sheet. 
 
-Insert text here.
+*Missing Data:* Using the filter tool I was able to locate the placement of any blanks or “\N”s. However most missing data was within the Longitude, Latitude, Address, and Ward columns which serve no purpose. By removing the unwanted columns I have in-turn removed most of the missing data. The Description column contains a large amount of “\N” data points and one “blank” space. This missing data will not affect the outcome of this assignment therefore I will choose not to edit or remove it. Final piece of missing data I discovered was the Type for two service calls that fell under the description of Property Standards - Grass Long/Weeds. I believe that from the description I can rectify these missing types by placing them under Bylaw Services.
 
-Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
-
-**For example:**
-
-As Cairo (2016) argues, a data visualization should be truthful...
+*Outliers:* As stated by Stats Canada "Outlier Values are extremly large or extremely small compared to what we might expect," not only according to this deffenition but also to the general consensus of what outliers entail I can confirm that there are no outliers in my data. By the time I was finished with the missing data portion I had no Outliers to discover or report. 
 
 ### 3.2. Cleaning Data
 
-Insert text here.
+For this section of the assignment I used 4 tools to help me clean and organise my chosen data:
+	*-The Filter Tool
+	-Open Refine
+	-Freeze Row Tool
+	-`SPLIT` Function*
+
+I found the filter tool very useful. It was clear to me that in order to create a chart that could show a relation between the three statuses a report can have that I needed to make use of the filter tool. I mostly used it to filter out data I wasn’t currently using but needed at a later time, such as the different statuses of the reports. In order to make my pie charts I would go from active, to resolved, and then cancelled so I could capture all necessary data. I also used the filter tool to find any missing data by filtering only the “blank”s and “\N”s.
+
+Open Refine was a tool that I used to double check my work and my cleaned data. I downloaded my finished spreadsheet as a Microsoft Excel sheet, then imported it to Open Refine. Utilising the text facet feature I was able to reassure myself that my work was sound.
+![](open-refine.png)
+*Open Refine Screen Capture*
+
+When working with such a massive data set you will find yourself constantly scrolling through thousands of rows of data. The freeze row tool helps you keep track of what you need to compare and for me it did just that. I constantly found myself wanting to compare rows of data that were thousands of lines away from one another. I also began to use it to freeze my first row so I was able to keep track of what column I was in.
+
+`SPLIT` is a function in google sheets that separates one column into two. I used it when deciding to split both the description and the first row from their french translations. My full functions looked like this `=SPLIT(D2, "|")`then I would've dragged the function down through the whole sheet.
 
 ### 3.3. Exploratory Data Analysis (EDA)
 
