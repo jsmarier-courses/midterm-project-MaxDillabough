@@ -88,11 +88,11 @@ While I was cleaning the data I had begun to think of what I could analyse and m
 
 After creating a pivot table, using the filter tool, I created three pie charts containing the frequency of the types and their retrospective status. I made these charts to allow the pivot table to be much easier to visualise.  
 
-![](active.png)
+![](active.png)<br>
 *This donut chart shows the frequency of all types of service requests that were active at the time of analysis*
-![](resolved.png)
+![](resolved.png)<br>
 *This donut chart shows the frequency of all types of service requests that were resolved at the time of analysis*
-![](cancelation.png)
+![](cancelation.png)<br>
 *This donut chart shows the frequency of all types of service requests that were cancelled at the time of analysis*
 
 ## 4. Potential Story
