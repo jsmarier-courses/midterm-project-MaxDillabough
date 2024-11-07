@@ -5,10 +5,6 @@
 
 # Midterm Project: Exploratory Data Analysis (EDA)
 ---
-## Foreword
-Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
-
-And to create an unordered list, we simply put a star (`Unordered List`) before each item.
 
 ## 1. Introduction
 
@@ -26,14 +22,14 @@ For the purpose of this assignment the data has been restricted to only include 
 1. *Potential Story*
 1. *Conclusion*
 1. *References*
-
+---
 ## 2. Getting Data
 
-Sadly I had no part in the collection of the raw data presented by the city of Ottawa data set [*2024 Service Requests*](https://open.ottawa.ca/documents/65fe42e2502d442b8a774fd3d954cac5/about). After the data was collected it was posted online for the public to download and view. I downloaded the data through the link provided on Brightspace (LINK). After downloading the CSV file I imported it into google sheets. The un-edited, raw data that was given, looked like so: 
+Sadly I had no part in the collection of the raw data presented by the city of Ottawa data set [*2024 Service Requests*](https://open.ottawa.ca/documents/65fe42e2502d442b8a774fd3d954cac5/about). After the data was collected it was posted online for the public to download and view. I downloaded the data through the link provided on Brightspace ([the CSV file](https://raw.githubusercontent.com/jsmarier/course-datasets/refs/heads/main/ottawa-311-service-requests-august-2024.csv)). After downloading the CSV file I imported it into google sheets. The un-edited, raw data that was given, looked like so: 
 
 
 ![](partly-cleaned-chart.png)
-*The Raw Data*
+* *The Raw Data*
 
 There are eleven columns and twenty eight thousand, five hundred thirty nine rows. This massive data set is a collection of all service requests made to the city of Ottawa during the month of August. On my first look I concluded that the chart was very messy. I immediately began to think of how I could start to crop the unwanted and unneeded data. Each column had a French and an English translation. Column 1 labels every service request with an ID number, for example the first column is labelled with the ID number 202457114702, this is an example of a categorical variable. The column labelled Type contains nominal variables because of the lack of natural order, no type is better than another. There was an issue in the Longitude and Latitude columns; there are three rows that had both Longitude and Latitude set to zero, this is impossible as that would mean the requests were made off the coast of Africa even though they’re supposed to be made within Ottawa. These outliers are not alone in being inaccurate coordinates as there is one latitude that is labelled as 0.000408032393, this is an incorrect piece of data as it would place the call to dispatch outside of Canada and within South America. I knew that the editing and understanding data phase of this project would be a long strenuous task. 
 	[Here is the link to my finished spreadsheet.](https://docs.google.com/spreadsheets/d/1nOKh_At9gIBojggtEPteNsc95fXGy0FLIGR02cvd0Wo/edit?usp=sharing)
@@ -41,18 +37,8 @@ There are eleven columns and twenty eight thousand, five hundred thirty nine row
 
 
 
-
+---
 ## 3. Understanding Data
-**Here are examples of functions and lines of code put in grey boxes:**
-
-1. If you name a function, put it between "angled" quotation marks like this: `IMPORTHTML`.
-1. If you want to include the entire line of code, do the same thing, albeit with your entire code: `=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)`.
-1. Alternatively, you can put your code in an independent box using the template below:
-
-``` r
-=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
-```
-This also shows how to create an ordered list. Simply put `1.` before each item.
 ### 3.1. VIMO Analysis
 
 *Valid and Invalid Data:* For the most part all data is valid and usable. There are, at times, data that becomes near useless to my cause as it does not validate my analysis or what I am trying to prove. Columns like Longitude, Latitude, Address, Ward, and Closed Date are not helpful and therefore I have removed them from the sheet. 
@@ -73,7 +59,7 @@ I found the filter tool very useful. It was clear to me that in order to create 
 
 Open Refine was a tool that I used to double check my work and my cleaned data. I downloaded my finished spreadsheet as a Microsoft Excel sheet, then imported it to Open Refine. Utilising the text facet feature I was able to reassure myself that my work was sound.
 ![](open-refine.png)
-*Open Refine Screen Capture*
+* *Open Refine Screen Capture*
 
 When working with such a massive data set you will find yourself constantly scrolling through thousands of rows of data. The freeze row tool helps you keep track of what you need to compare and for me it did just that. I constantly found myself wanting to compare rows of data that were thousands of lines away from one another. I also began to use it to freeze my first row so I was able to keep track of what column I was in.
 
@@ -83,34 +69,40 @@ When working with such a massive data set you will find yourself constantly scro
 
 While I was cleaning the data I had begun to think of what I could analyse and make a story from. The second column, Status, caught my eye. I found it interesting that certain types of service requests were receiving different treatment or had different lengths of service time. I concluded that the type of request and its treatment was a possible story thread I could follow. With a focus on the storytelling I made a pivot table:
 
-![](final-pivot-table.png)
-*The rows of the pivot table are the Type column. Secondly the columns of the pivot table are the Status. Finally the value of the table is the Type*
+![](final-pivot-table.png)<br>
+* *The rows of the pivot table are the Type column. Secondly the columns of the pivot table are the Status. Finally the value of the table is the Type*
 
 After creating a pivot table, using the filter tool, I created three pie charts containing the frequency of the types and their retrospective status. I made these charts to allow the pivot table to be much easier to visualise.  
 
 ![](active.png)<br>
-*This donut chart shows the frequency of all types of service requests that were active at the time of analysis*
+* *This donut chart shows the frequency of all types of service requests that were active at the time of analysis*
 ![](resolved.png)<br>
-*This donut chart shows the frequency of all types of service requests that were resolved at the time of analysis*
+* *This donut chart shows the frequency of all types of service requests that were resolved at the time of analysis*
 ![](cancelation.png)<br>
-*This donut chart shows the frequency of all types of service requests that were cancelled at the time of analysis*
+* *This donut chart shows the frequency of all types of service requests that were cancelled at the time of analysis*
 
+---
 ## 4. Potential Story
 
 During the cleaning stage of the project I had already known what I wanted to analyse as a possible story, so I began to delete columns that did not fit my agenda. My possible story is as follows:
 
 *Is there a correlation between a service request’s jurisdiction and the speed at which it is solved? Could a reason for this be the resources spent in said jurisdiction?*
 
-This story comes from the data that I have analysed, made a pivot chart of, and made donut charts of. I believe that this story could be expanded upon by not only adding additional resources by interviewing several employees at the city of Ottawa. For example I would start in the Water and Environment or Garbage and Recycling departments and request to interview the higher-ups, I would find this information through this [city of Ottawa site](https://ottawa.ca/en/city-hall/council-committees-and-boards/committees-and-boards#), or I would interview someone like [Joe Bush](https://www.mlive.com/news/grand-rapids/2024/11/ottawa-county-water-resources-commissioner-jeb-bush-wins-reelection.html), the head of the Ottawa county water resources. I would also do research into the resources that go into the city’s various departments. I would most likely use the description column to relate consistent issues that come up on the service requests in the waste department [(Garbage and Recycling departments)](https://www.ontario.ca/page/waste-management). This story would be one that unravels the relationship between type and treatment.
+This story comes from the data that I have analysed, made a pivot chart of, and made donut charts of. I believe that this story could be expanded upon by not only adding additional resources by interviewing several employees at the city of Ottawa. For example I would start in the Water and Environment or Garbage and Recycling departments and request to interview the higher-ups, I would find this information through this City of Ottawa ([The City of Ottawa](https://ottawa.ca/en/city-hall/council-committees-and-boards/committees-and-boards#)), or I would interview someone like the head of the Ottawa county water resources. I would also do research into the resources that go into the city’s various departments. I would most likely use the description column to relate consistent issues that come up on the service requests in the waste department of the Province Ontairo and the resources it is given ([Garbage and Recycling departments](https://www.ontario.ca/page/waste-management)). This story would be one that unravels the relationship between type and treatment.
 
+---
 ## 5. Conclusion
 
-Insert text here.
+During this assignment I found myself struggling to come to reasonable conclusions about what my overall objective should be during the cleaning stage. I found it difficult due to the lack of direction I had going into the cleaning stage. I ended up merging all of part three’s subheadings and writing them all at once. I believe this decision to complete the section out of order made it harder for me to translate my ideas to written form. I also believe my erratic way of handling the section affected the quality of section four, potential story. 
 
+The story I chose to develop and analyse was one that I am, despite my handling of section three, proud of. I knew what data I was going to use and I knew how I was going to use it. I purposely deleted any data I didn’t believe to be useful to my cause, those being location data sets (longitude, latitude, address, ward). In conclusion, early on in the project I knew what my story was and how I wanted to go about it. 
+
+Though I am proud of my story I still think that I could have researched more information outside of the data set. I think my possible interviewees section of part four is an area I could have expanded more on. I also think I could have looked more into the workplaces surrounding the interviewees and what resources they have as they could have made more compelling arguments.
+
+---
 ## 6. References
+Clerk, O. of the C. (2023, March 22). Committees and boards. City of Ottawa. [https://ottawa.ca/en/city-hall/council-committees-and-boards/committees-and-boards#](https://ottawa.ca/en/city-hall/council-committees-and-boards/committees-and-boards#)
 
-Include a list of your references here. Please follow [APA guidelines for references](https://apastyle.apa.org/style-grammar-guidelines/references). Hanging paragraphs aren't required though.
+Waste management. ontario.ca. (n.d.). [https://www.ontario.ca/page/waste-management](https://www.ontario.ca/page/waste-management) 
 
-**Here's an example:**
-
-Bounegru, L., & Gray, J. (Eds.). (2021). *The Data Journalism Handbook 2: Towards A Critical Data Practice*. Amsterdam University Press. [https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153](https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153)
+---
