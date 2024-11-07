@@ -81,21 +81,27 @@ When working with such a massive data set you will find yourself constantly scro
 
 ### 3.3. Exploratory Data Analysis (EDA)
 
-Insert text here.
+While I was cleaning the data I had begun to think of what I could analyse and make a story from. The second column, Status, caught my eye. I found it interesting that certain types of service requests were receiving different treatment or had different lengths of service time. I concluded that the type of request and its treatment was a possible story thread I could follow. With a focus on the storytelling I made a pivot table:
 
-**This section should include a screen capture of your pivot table, like so:**
+![](final-pivot-table.png)
+*The rows of the pivot table are the Type column. Secondly the columns of the pivot table are the Status. Finally the value of the table is the Type*
 
-![](pivot-table-screen-capture.png)<br>
-*Figure 2: This pivot table shows...*
+After creating a pivot table, using the filter tool, I created three pie charts containing the frequency of the types and their retrospective status. I made these charts to allow the pivot table to be much easier to visualise.  
 
-**This section should also include a screen capture of your exploratory chart, like so:**
-
-![](chart-screen-capture.png)<br>
-*Figure 3: This exploratory chart shows...*
+![](active.png)
+*This donut chart shows the frequency of all types of service requests that were active at the time of analysis*
+![](resolved.png)
+*This donut chart shows the frequency of all types of service requests that were resolved at the time of analysis*
+![](cancelation.png)
+*This donut chart shows the frequency of all types of service requests that were cancelled at the time of analysis*
 
 ## 4. Potential Story
 
-Insert text here.
+During the cleaning stage of the project I had already known what I wanted to analyse as a possible story, so I began to delete columns that did not fit my agenda. My possible story is as follows:
+
+*Is there a correlation between a service request’s jurisdiction and the speed at which it is solved? Could a reason for this be the resources spent in said jurisdiction?*
+
+This story comes from the data that I have analysed, made a pivot chart of, and made donut charts of. I believe that this story could be expanded upon by not only adding additional resources by interviewing several employees at the city of Ottawa. For example I would start in the Water and Environment or Garbage and Recycling departments and request to interview the higher-ups, I would find this information through this [city of Ottawa site](https://ottawa.ca/en/city-hall/council-committees-and-boards/committees-and-boards#), or I would interview someone like [Joe Bush](https://www.mlive.com/news/grand-rapids/2024/11/ottawa-county-water-resources-commissioner-jeb-bush-wins-reelection.html), the head of the Ottawa county water resources. I would also do research into the resources that go into the city’s various departments. I would most likely use the description column to relate consistent issues that come up on the service requests in the waste department [(Garbage and Recycling departments)](https://www.ontario.ca/page/waste-management). This story would be one that unravels the relationship between type and treatment.
 
 ## 5. Conclusion
 
